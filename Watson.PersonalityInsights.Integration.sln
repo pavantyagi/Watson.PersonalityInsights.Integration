@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F7C29F77-C9D9-4556-BDF3-9BD4BA2E9B6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5AD9F31F-A829-4823-87BC-1C2786B6C4E4}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Watson.PersonalityInsights.Tests.Integration", "test\Watson.PersonalityInsights.Tests.Integration\Watson.PersonalityInsights.Tests.Integration.xproj", "{C954B225-D79A-4711-B4B5-B297ADD6F12D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C954B225-D79A-4711-B4B5-B297ADD6F12D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C954B225-D79A-4711-B4B5-B297ADD6F12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C954B225-D79A-4711-B4B5-B297ADD6F12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C954B225-D79A-4711-B4B5-B297ADD6F12D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C954B225-D79A-4711-B4B5-B297ADD6F12D} = {F7C29F77-C9D9-4556-BDF3-9BD4BA2E9B6B}
+	EndGlobalSection
+EndGlobal
