@@ -58,7 +58,6 @@ namespace Watson.PersonalityInsights.Tests.Integration
             var content2 = File.ReadAllText("SampleContent2.txt");
             var service = new PersonalityInsightsService(Settings.Username, Settings.Password);
 
-            var content = new Content();
             var contentItems = new List<ContentItem>
             {
                 new ContentItem
@@ -91,8 +90,7 @@ namespace Watson.PersonalityInsights.Tests.Integration
                 }
             };
 
-            content.ContentItems = contentItems;
-
+            var content = new Content(contentItems);
             var options = new ProfileOptions(content);
             var profile = await service.GetProfileAsync(options).ConfigureAwait(false);
 
