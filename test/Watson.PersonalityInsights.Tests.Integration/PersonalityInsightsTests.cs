@@ -74,7 +74,7 @@ namespace Watson.PersonalityInsights.Tests.Integration
 
             Assert.NotNull(profile);
             Assert.True(profile.StartsWith("{"));
-            Assert.True(profile.StartsWith("}"));
+            Assert.True(profile.EndsWith("}"));
         }
 
         [Fact]
@@ -88,7 +88,7 @@ namespace Watson.PersonalityInsights.Tests.Integration
 
             Assert.NotNull(profile);
             Assert.True(profile.StartsWith("{"));
-            Assert.True(profile.StartsWith("}"));
+            Assert.True(profile.EndsWith("}"));
         }
 
         [Fact]
@@ -110,7 +110,7 @@ namespace Watson.PersonalityInsights.Tests.Integration
 
             Assert.NotNull(profile);
             Assert.True(profile.StartsWith("{"));
-            Assert.True(profile.StartsWith("}"));
+            Assert.True(profile.EndsWith("}"));
         }
 
         [Fact]
