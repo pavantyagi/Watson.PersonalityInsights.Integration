@@ -65,6 +65,55 @@ namespace Watson.PersonalityInsights.Tests.Integration
         }
 
         [Fact]
+        public async Task GetProfileAsJsonAsync_WithString_IsNotNull()
+        {
+            var content = File.ReadAllText("SampleContent1.txt");
+
+            var service = new PersonalityInsightsService(Settings.Username, Settings.Password);
+            var profile = await service.GetProfileAsJsonAsync(content).ConfigureAwait(false);
+
+            Assert.NotNull(profile);
+            Assert.True(profile.StartsWith("{"));
+            Assert.True(profile.StartsWith("}"));
+        }
+
+        [Fact]
+        public async Task GetProfileAsJsonAsync_WithOptions_IsNotNull()
+        {
+            var content = File.ReadAllText("SampleContent1.txt");
+
+            var service = new PersonalityInsightsService(Settings.Username, Settings.Password);
+            var options = new ProfileOptions(content) {IncludeRaw = true};
+            var profile = await service.GetProfileAsJsonAsync(options).ConfigureAwait(false);
+
+            Assert.NotNull(profile);
+            Assert.True(profile.StartsWith("{"));
+            Assert.True(profile.StartsWith("}"));
+        }
+
+        [Fact]
+        public async Task GetProfileAsJsonAsync_WithContentItems_IsNotNull()
+        {
+            var content1 = File.ReadAllText("SampleContent1.txt");
+            var content2 = File.ReadAllText("SampleContent2.txt");
+            var service = new PersonalityInsightsService(Settings.Username, Settings.Password);
+
+            var contentItems = new List<ContentItem>
+            {
+                new ContentItem(content1),
+                new ContentItem(content2)
+            };
+
+            var content = new Content(contentItems);
+            var options = new ProfileOptions(content);
+            var profile = await service.GetProfileAsJsonAsync(options).ConfigureAwait(false);
+
+            Assert.NotNull(profile);
+            Assert.True(profile.StartsWith("{"));
+            Assert.True(profile.StartsWith("}"));
+        }
+
+        [Fact]
         public async Task GetProfileAsCsvAsync_IsNotNull()
         {
             var content = File.ReadAllText("SampleContent1.txt");

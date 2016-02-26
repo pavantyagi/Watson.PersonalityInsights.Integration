@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "Newtonsoft.Json": "8.0.2",
-    "Watson.PersonalityInsights": "1.0.0-build32",
+    "Watson.PersonalityInsights": "1.0.0-build34",
     "xunit": "2.1.0",
     "xunit.runner.dnx": "2.1.0-rc1-build204"
   },
